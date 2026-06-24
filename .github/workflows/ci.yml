@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:
+  workflow_dispatch: 
 
 env:
   APP_ENV: ${{ secrets.APP_ENV }}
