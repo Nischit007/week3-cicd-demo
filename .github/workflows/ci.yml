@@ -10,7 +10,7 @@ on:
     workflow_dispatch:
 
 env :
-    APP_ENV:${{ secrets.APP_ENV }}
+    APP_ENV: ${{ secrets.APP_ENV }}  
 
 jobs:
     build-and-test:
