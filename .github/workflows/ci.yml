@@ -13,7 +13,7 @@ env :
     APP_ENV=${{secrets.APP_ENV}}
 
 jobs:
-    build and test:
+    build-and-test:
         runs-on: ubuntu-latest  
 
     matrix-method:
