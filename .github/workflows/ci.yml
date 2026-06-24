@@ -3,7 +3,7 @@ name: Deploying Assignment week 3
 on:
   push:
     branches:
-      - "*"
+      - "**"
   pull_request:
     branches:
       - main
