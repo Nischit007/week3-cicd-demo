@@ -44,6 +44,9 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip
 
+      - name: Providing permission to app and tesh
+        run : chmod +x test.sh app.sh 
+
       - name: Run app.sh
         run: ./app.sh
 
