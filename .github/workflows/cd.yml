@@ -6,7 +6,7 @@ on:
       - main
 
   workflow_dispatch:
-    input:
+    inputs:
       enviornment:
         description: "Deployment Enviornment"
         required: true
@@ -67,6 +67,19 @@ jobs:
           name: app-result
           path: .
 
-
-
   deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: stagging
+
+    steps:
+      - name: Deployment Info
+        run: | 
+          echo "Deploying application..."
+          echo "Commit SHA: $GITHUB_SHA"
+          echo "Actor: $GITHUB_ACTOR"
+          echo "Timestamp: $(date)"
+
+    
