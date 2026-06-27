@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                // sh 'chmod +x app.sh test.sh'
+                sh 'chmod +x app.sh test.sh'
                 sh './app.sh'
             }
         }
